@@ -1,7 +1,9 @@
 # first, install iterm2 by hand
 basepath=$(cd `dirname $0`;pwd)
-cp $basepath/.zshrc ~
 chsh -s /bin/zsh
+cp $basepath/.zshrc ~
+cat /etc/profile > /etc/zprofile
+
 
 # install Oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
