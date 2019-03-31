@@ -1,8 +1,10 @@
 # first, install iterm2 by hand
 basepath=$(cd `dirname $0`;pwd)
 chsh -s /bin/zsh
-cp $basepath/.zshrc ~
+# Mac下使用了zsh会不执行/etc/profile文件，当然，如果用原始的是会执行。
+# 转而执行的是这两个文件，每次登陆都会执行： ~/.zshrc与/etc/zshenv与/etc/zshrc
 cat /etc/profile > /etc/zprofile
+cp $basepath/.zshrc ~
 
 
 # install Oh my zsh
